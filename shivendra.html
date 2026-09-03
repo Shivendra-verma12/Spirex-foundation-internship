@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shivendra Verma - Portfolio</title>
+<style>
+  :root{
+    --bg:#f5f7fb; --card:#ffffff; --text:#1e293b; --sub:#64748b;
+    --primary:#6366f1; --bar-bg:#e2e8f0; --border:#eef2ff;
+  }
+  body.dark{
+    --bg:#0f172a; --card:#1e293b; --text:#f1f5f9; --sub:#94a3b8;
+    --bar-bg:#334155; --border:#334155;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
+  body{background:var(--bg);color:var(--text);transition:0.3s;}
+  .container{max-width:420px;margin:0 auto;background:var(--card);min-height:100vh;box-shadow:0 0 30px rgba(0,0,0,0.05);}
+  .header{padding:20px;display:flex;gap:15px;align-items:center;position:relative;}
+  .avatar{width:72px;height:72px;background:var(--primary);border-radius:50%;display:flex;justify-content:center;align-items:center;color:white;font-weight:800;font-size:24px;flex-shrink:0;}
+  .header h1{font-size:22px;line-height:1.2;}
+  .header p{font-size:13px;color:var(--sub);margin-top:6px;line-height:1.4;}
+  .theme-btn{position:absolute;right:15px;top:20px;width:40px;height:40px;border-radius:50%;background:var(--card);border:1px solid var(--border);box-shadow:0 4px 10px rgba(0,0,0,0.1);cursor:pointer;font-size:18px;display:flex;justify-content:center;align-items:center;}
+  
+  .section{padding:18px 20px;}
+  .section h2{font-size:18px;margin-bottom:12px;position:relative;display:inline-block;padding-bottom:4px;}
+  .section h2::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:2px;background:var(--primary);}
+  .about-text{font-size:14px;color:var(--sub);line-height:1.6;}
+  
+  .skill-row{margin-bottom:14px;}
+  .skill-top{display:flex;justify-content:space-between;font-size:14px;font-weight:600;margin-bottom:6px;}
+  .bar{width:100%;height:8px;background:var(--bar-bg);border-radius:10px;overflow:hidden;}
+  .fill{height:100%;background:var(--primary);border-radius:10px;width:0;transition:1.2s ease;}
+
+  .project-card{background:var(--bg);border:1px solid var(--border);border-radius:14px;padding:14px;display:flex;gap:12px;align-items:flex-start;margin-bottom:12px;transition:0.2s;}
+  .project-card:hover{transform:translateY(-2px);box-shadow:0 8px 15px rgba(0,0,0,0.06);}
+  .p-icon{font-size:28px;}
+  .project-card b{font-size:15px;display:block;}
+  .project-card span{font-size:12.5px;color:var(--sub);margin-top:4px;display:block;line-height:1.4;}
+
+  .contact{background:var(--bg);margin:15px;border-radius:14px;padding:14px;}
+  .contact a{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text);font-size:13px;margin:8px 0;font-weight:500;}
+  .contact a i{color:var(--primary);}
+
+  .footer-actions{padding:20px;display:flex;gap:10px;}
+  .btn{flex:1;padding:12px;border-radius:12px;border:none;font-weight:700;cursor:pointer;}
+  .btn-primary{background:var(--primary);color:white;}
+  .btn-outline{background:var(--card);border:1px solid var(--border);color:var(--text);}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="container" id="main">
+  <div class="header">
+    <div class="avatar">SV</div>
+    <div>
+      <h1>Shivendra Verma</h1>
+      <p>I am a Computer Science student passionate about programming, web development and building useful digital experiences.</p>
+    </div>
+    <button class="theme-btn" onclick="toggleTheme()" id="themeBtn">🌙</button>
+  </div>
+
+  <div class="section">
+    <h2>About Me</h2>
+    <p class="about-text">Hello! I am Shivendra Verma, a Computer Science Engineering student at RGPV Bhopal. I enjoy learning programming, creating websites and exploring new technologies. My goal is to improve my technical skills through practical projects.</p>
+  </div>
+
+  <div class="section">
+    <h2>My Skills</h2>
+    <div class="skill-row"><div class="skill-top"><span>HTML</span><span>90%</span></div><div class="bar"><div class="fill" data-w="90%"></div></div></div>
+    <div class="skill-row"><div class="skill-top"><span>CSS</span><span>85%</span></div><div class="bar"><div class="fill" data-w="85%"></div></div></div>
+    <div class="skill-row"><div class="skill-top"><span>JavaScript</span><span>75%</span></div><div class="bar"><div class="fill" data-w="75%"></div></div></div>
+    <div class="skill-row"><div class="skill-top"><span>Python</span><span>70%</span></div><div class="bar"><div class="fill" data-w="70%"></div></div></div>
+  </div>
+
+  <div class="section">
+    <h2>My Projects</h2>
+    <div class="project-card">
+      <div class="p-icon">🌐</div>
+      <div><b>Personal Portfolio</b><span>A responsive portfolio website using HTML, CSS and JavaScript.</span></div>
+    </div>
+    <div class="project-card">
+      <div class="p-icon">🧮</div>
+      <div><b>JavaScript Calculator</b><span>A simple interactive calculator built using JavaScript.</span></div>
+    </div>
+  </div>
+
+  <div class="contact">
+    <a href="tel:9093256356"><i class="fa-solid fa-phone"></i> 9093256356</a>
+    <a href="mailto:shivendra9093256356@gmail.com"><i class="fa-solid fa-envelope"></i> shivendra9093256356@gmail.com</a>
+    <a><i class="fa-solid fa-building-columns"></i> RGPV Bhopal</a>
+  </div>
+
+  <div class="footer-actions">
+    <button class="btn btn-primary" onclick="window.location.href='tel:9093256356'"><i class="fa-solid fa-phone"></i> Call Me</button>
+    <button class="btn btn-outline" onclick="window.location.href='mailto:shivendra9093256356@gmail.com'"><i class="fa-solid fa-envelope"></i> Email Me</button>
+  </div>
+</div>
+
+<script>
+  // Animate Skills
+  window.onload = () => {
+    document.querySelectorAll('.fill').forEach(el => {
+      setTimeout(()=> el.style.width = el.dataset.w, 300);
+    });
+  }
+
+  // Dark Mode Toggle (localStorage error fix)
+  let isDark = false;
+  function toggleTheme(){
+    try{
+      isDark = !isDark;
+      document.body.classList.toggle('dark', isDark);
+      document.getElementById('themeBtn').innerText = isDark ? '☀️' : '🌙';
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    } catch(e){
+      // For Code Playground where localStorage is blocked
+      isDark = !isDark;
+      document.body.classList.toggle('dark', isDark);
+      document.getElementById('themeBtn').innerText = isDark ? '☀️' : '🌙';
+    }
+  }
+
+  // Load saved theme
+  try{
+    if(localStorage.getItem('theme') === 'dark') toggleTheme();
+  }catch(e){}
+</script>
+
+</body>
+</html>
