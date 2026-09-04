@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shivendra Verma - Resume</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
+  body{background:#f3f4f6;display:flex;justify-content:center;padding:24px;}
+  .page{width:100%;max-width:750px;background:white;border-radius:16px;overflow:hidden;box-shadow:0 20px 40px rgba(0,0,0,0.08);}
+  
+  /* Header */
+  .top-header{padding:35px 40px 25px;display:flex;justify-content:space-between;align-items:flex-start;border-bottom:1px solid #f1f5f9;}
+  .top-header h1{font-size:32px;font-weight:800;color:#111827;letter-spacing:-1px;}
+  .top-header h1 span{color:#6366f1;}
+  .top-header .role{font-size:13px;font-weight:700;color:#6366f1;letter-spacing:2px;text-transform:uppercase;margin-top:6px;}
+  .contact-pill{display:flex;flex-direction:column;gap:8px;text-align:right;}
+  .pill{background:#f8fafc;border:1px solid #eef2ff;padding:7px 14px;border-radius:100px;font-size:11.5px;font-weight:600;color:#334155;display:inline-flex;align-items:center;gap:6px;}
+  
+  .content{padding:10px 40px 30px;display:grid;grid-template-columns:1fr 1fr;gap:30px;}
+  .full{grid-column:1 / -1;}
+  .block{margin-top:24px;}
+  .block h2{font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#9ca3af;margin-bottom:14px;display:flex;align-items:center;gap:8px;}
+  .block h2::after{content:'';flex:1;height:1px;background:#f1f5f9;}
+  .text{font-size:13px;color:#4b5563;line-height:1.7;}
+
+  .edu-card{background:#f9fafb;border:1px dashed #e5e7eb;border-radius:12px;padding:14px 16px;}
+  .edu-card b{font-size:14px;color:#111827;}
+  .edu-card p{font-size:12px;color:#6b7280;margin-top:3px;}
+
+  .skills{display:flex;flex-wrap:wrap;gap:8px;}
+  .sk{padding:8px 14px;border-radius:10px;font-size:12px;font-weight:700;border:1.5px solid #e5e7eb;background:white;color:#111827;}
+  .sk.hl{background:#111827;color:white;border-color:#111827;}
+
+  .exp{border-left:2px solid #111827;padding-left:16px;position:relative;}
+  .exp::before{content:'';position:absolute;left:-6px;top:0;width:10px;height:10px;background:#6366f1;border-radius:50%;}
+  .exp h4{font-size:14px;font-weight:700;}
+  .exp .c{font-size:12px;font-weight:600;color:#6366f1;margin:3px 0;}
+  .exp .d{font-size:12.5px;color:#6b7280;line-height:1.5;margin-top:6px;}
+
+  .project{padding:14px;border:1.5px solid #f3f4f6;border-radius:12px;transition:0.2s;}
+  .project:hover{border-color:#6366f1;transform:translateY(-2px);}
+  .project h4{font-size:13.5px;display:flex;justify-content:space-between;}
+  .project h4 span{font-size:10px;background:#eef2ff;color:#6366f1;padding:3px 8px;border-radius:20px;}
+  .project p{font-size:12px;color:#6b7280;margin-top:6px;line-height:1.5;}
+
+  .btn{position:fixed;bottom:20px;right:20px;background:#111827;color:white;border:none;padding:13px 22px;border-radius:100px;font-weight:700;font-size:13px;cursor:pointer;box-shadow:0 10px 25px rgba(0,0,0,0.2);}
+  @media print{body{padding:0;background:white}.btn{display:none}.page{box-shadow:none;border-radius:0}}
+  @media(max-width:600px){.top-header{flex-direction:column}.contact-pill{flex-direction:row;flex-wrap:wrap;margin-top:15px;text-align:left}.content{grid-template-columns:1fr;padding:10px 22px 30px}.top-header{padding:25px 22px}}
+</style>
+</head>
+<body>
+
+<div class="page">
+  <div class="top-header">
+    <div>
+      <h1>SHIVENDRA <span>VERMA</span></h1>
+      <div class="role">Frontend Developer</div>
+    </div>
+    <div class="contact-pill">
+      <div class="pill">📞 9093256356</div>
+      <div class="pill">✉️ shivendra9093256356@gmail.com</div>
+      <div class="pill">📍 RGPV Bhopal</div>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="block full">
+      <h2>Objective</h2>
+      <p class="text">Enthusiastic B.Tech CSE student from RGPV Bhopal with hands-on experience in Frontend Development. Looking for an opportunity to contribute to real-world projects at a growth-oriented company and enhance my skills in modern web technologies.</p>
+    </div>
+
+    <div class="block">
+      <h2>About Me</h2>
+      <p class="text">I am a Computer Science Engineering student passionate about web development and clean UI design. I enjoy building responsive websites and learning new frameworks. Quick learner and team player.</p>
+      
+      <div class="block">
+        <h2>Education</h2>
+        <div class="edu-card">
+          <b>B.Tech in Computer Science & Engineering</b>
+          <p>RGPV - Rajiv Gandhi Proudyogiki Vishwavidyalaya, Bhopal</p>
+          <p>2022 - 2026 | CGPA: Pursuing</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="block">
+      <h2>Skills</h2>
+      <div class="skills">
+        <span class="sk hl">HTML5</span>
+        <span class="sk hl">CSS3</span>
+        <span class="sk hl">JavaScript</span>
+        <span class="sk">Responsive Design</span>
+        <span class="sk">Git & GitHub</span>
+        <span class="sk">UI/UX Basics</span>
+      </div>
+
+      <div class="block">
+        <h2>Experience</h2>
+        <div class="exp">
+          <h4>Frontend Development Intern</h4>
+          <div class="c">Spirex Foundation</div>
+          <div class="d">Developed and optimized frontend components using HTML, CSS, JS. Worked on improving website performance and user experience.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="block full">
+      <h2>Project</h2>
+      <div class="project">
+        <h4>Student Portfolio Card <span>HTML / CSS / JS</span></h4>
+        <p>Created a modern, responsive student portfolio card with dark/light mode toggle, animated skill bars, and contact integration. Focused on clean UI and mobile-first design.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<button class="btn" onclick="window.print()">⬇ Download PDF</button>
+
+</body>
+</html>
