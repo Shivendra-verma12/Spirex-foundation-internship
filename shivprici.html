@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fresh Fruit Box Pricing</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    }
+
+    body {
+      background-color: #f4f8f5;
+      color: #2d3748;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    .pricing-container {
+      max-width: 1000px;
+      width: 100%;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .header h2 {
+      font-size: 2rem;
+      color: #1a4d2e;
+      margin-bottom: 8px;
+    }
+
+    .header p {
+      color: #52796f;
+      font-size: 0.95rem;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 16px;
+      border: 1px solid #e2e8f0;
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(26, 77, 46, 0.08);
+    }
+
+    /* Highlighted / Best Value Card */
+    .card.featured {
+      border: 2px solid #2e7d32;
+      background: #fbfdfb;
+      box-shadow: 0 8px 20px rgba(46, 125, 50, 0.12);
+    }
+
+    .badge {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #2e7d32;
+      color: #ffffff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .fruit-icon {
+      font-size: 2.2rem;
+      margin-bottom: 12px;
+    }
+
+    .plan-name {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #1a4d2e;
+      margin-bottom: 4px;
+    }
+
+    .plan-desc {
+      font-size: 0.85rem;
+      color: #64748b;
+      margin-bottom: 16px;
+    }
+
+    .price-wrap {
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 1px dashed #cbd5e1;
+    }
+
+    .price {
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: #1a4d2e;
+    }
+
+    .price span {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #64748b;
+    }
+
+    .features-list {
+      list-style: none;
+      margin-bottom: 24px;
+      flex-grow: 1;
+    }
+
+    .features-list li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.9rem;
+      color: #475569;
+      margin-bottom: 10px;
+    }
+
+    .features-list li::before {
+      content: "✓";
+      color: #2e7d32;
+      font-weight: bold;
+    }
+
+    .buy-btn {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background-color: #e8f5e9;
+      color: #2e7d32;
+      font-size: 0.95rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background-color 0.2s ease, color 0.2s ease;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .buy-btn:hover {
+      background-color: #c8e6c9;
+    }
+
+    .card.featured .buy-btn {
+      background-color: #2e7d32;
+      color: #ffffff;
+    }
+
+    .card.featured .buy-btn:hover {
+      background-color: #1b5e20;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="pricing-container">
+    <div class="header">
+      <h2>Fresh Organic Fruit Boxes</h2>
+      <p>Farm-fresh seasonal fruits delivered weekly to your doorstep</p>
+    </div>
+
+    <div class="cards-grid">
+      <!-- Plan 1 -->
+      <div class="card">
+        <div>
+          <div class="fruit-icon">🍎</div>
+          <h3 class="plan-name">Mini Fresh Box</h3>
+          <p class="plan-desc">Great for individuals and light snacking.</p>
+          <div class="price-wrap">
+            <div class="price">115 <span>/week</span></div>
+          </div>
+          <ul class="features-list">
+            <li>3 kg Assorted Fruits</li>
+            <li>4 Seasonal Varieties</li>
+            <li>100% Organic Certified</li>
+            <li>Free Home Delivery</li>
+          </ul>
+        </div>
+        <a href="#" class="buy-btn">Order Mini Box</a>
+      </div>
+
+      <!-- Plan 2 (Featured) -->
+      <div class="card featured">
+        <span class="badge">Most Popular</span>
+        <div>
+          <div class="fruit-icon">🧺</div>
+          <h3 class="plan-name">Family Harvest</h3>
+          <p class="plan-desc">Perfect balance for small families.</p>
+          <div class="price-wrap">
+            <div class="price">28 <span>/week</span></div>
+          </div>
+          <ul class="features-list">
+            <li>7 kg Assorted Fruits</li>
+            <li>8 Seasonal Varieties</li>
+            <li>Includes Fresh Berries</li>
+            <li>100% Organic Certified</li>
+            <li>Priority Morning Delivery</li>
+          </ul>
+        </div>
+        <a href="#" class="buy-btn">Order Family Box</a>
+      </div>
+
+      <!-- Plan 3 -->
+      <div class="card">
+        <div>
+          <div class="fruit-icon">🍍</div>
+          <h3 class="plan-name">Exotic Feast Crate</h3>
+          <p class="plan-desc">Ideal for offices and fruit lovers.</p>
+          <div class="price-wrap">
+            <div class="price">48 <span>/week</span></div>
+          </div>
+          <ul class="features-list">
+            <li>12 kg Premium Fruits</li>
+            <li>Exotic & Imported Selection</li>
+            <li>Customizable Fruit Mix</li>
+            <li>Eco-friendly Wooden Crate</li>
+          </ul>
+        </div>
+        <a href="#" class="buy-btn">Order Crate</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
